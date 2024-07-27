@@ -75,4 +75,14 @@ public class Main {
             System.out.println("Currency " + currency + " not found.");
         }
     }
+
+    private static void compareTwoCurrencies(){
+        CurrencyDataProvider currencyOne = new CurrencyDataProvider();
+        CurrencyDataProvider currencyTwo = new CurrencyDataProvider();
+        Scanner scanner = new Scanner(System.in);
+        //Prompt users
+        System.out.println("Please enter the first currency: ");
+
+        System.out.println("Please enter the second currency: ");
+    }
 }
