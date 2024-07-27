@@ -77,12 +77,27 @@ public class Main {
     }
 
     private static void compareTwoCurrencies(){
-        CurrencyDataProvider currencyOne = new CurrencyDataProvider();
-        CurrencyDataProvider currencyTwo = new CurrencyDataProvider();
-        Scanner scanner = new Scanner(System.in);
-        //Prompt users
-        System.out.println("Please enter the first currency: ");
+        //Access data from CurrencyDataProvider file
+        CurrencyDataProvider currencyDataProvider = new CurrencyDataProvider();
+        Map<String, Double> currencyData = currencyDataProvider.getCurrencyData();
 
+        Scanner scanner = new Scanner(System.in);
+
+        //Prompt users and get input for two currencies
+        System.out.println("Please enter the first currency: ");
+        String firstCurrency = scanner.next().toUpperCase();
+        Double currencyOne = currencyData.get(firstCurrency);
         System.out.println("Please enter the second currency: ");
+        String secondCurrency = scanner.next().toUpperCase();
+        Double currencyTwo = currencyData.get(secondCurrency);
+
+        System.out.println("First currrency (" + firstCurrency + "): rate" + currencyOne);
+        System.out.println("Second currrency (" + secondCurrency + "): rate" + currencyTwo);
+        if(currencyOne > currencyTwo){
+            System.out.println("Currency " + firstCurrency + " is stronger than currency " + secondCurrency);
+        }else{
+            System.out.println("Currency " + firstCurrency + " is weaker than currency " + secondCurrency);
+        }
+
     }
 }
