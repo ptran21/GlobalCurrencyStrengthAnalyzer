@@ -100,9 +100,9 @@ public class Main {
         String secondCurrency = scanner.next().toUpperCase();
         Double currencyTwo = currencyData.get(secondCurrency);
 
-        System.out.println("First currency (" + firstCurrency + "): rate" + currencyOne);
-        System.out.println("Second currency (" + secondCurrency + "): rate" + currencyTwo);
-        if(currencyOne > currencyTwo){
+        System.out.println("First currency (" + firstCurrency + ") rate: " + currencyOne);
+        System.out.println("Second currency (" + secondCurrency + ") rate: " + currencyTwo);
+        if(currencyOne < currencyTwo){
             System.out.println("Currency " + firstCurrency + " is stronger than currency " + secondCurrency);
         }else{
             System.out.println("Currency " + firstCurrency + " is weaker than currency " + secondCurrency);
