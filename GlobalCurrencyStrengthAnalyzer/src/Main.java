@@ -11,6 +11,9 @@ public class Main {
         System.out.println("Choose an option to get started:");
         System.out.println("1. Convert Foreign Currency to USD");
         System.out.println("2. Check Currency Strength On Global Spectrum");
+        System.out.println("3. Compare the Strength of 2 Currencies");
+        System.out.println("4. Exit Program!");
+
         System.out.print("Your choice: ");
 
         // Create a scanner object to capture user input
@@ -22,7 +25,13 @@ public class Main {
             convertCurrencyToUSD();  // Call method to handle currency conversion
         } else if (option == 2) {
             checkCurrencyStrength();  // Call method to check currency strength
-        } else {
+        }else if(option == 3){
+            compareTwoCurrencies();
+        }
+        else if(option == 4){
+            System.out.println("Goodbye !");
+        }
+        else {
             // Notify the user if the entered option is invalid
             System.out.println("Invalid option selected. Please try again.");
         }
